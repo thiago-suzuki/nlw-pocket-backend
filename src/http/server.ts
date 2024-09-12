@@ -33,6 +33,5 @@ app
     port: port,
   })
   .then(() => {
-    // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
     console.log(`HTTP server running on port ${port}!`)
   })
