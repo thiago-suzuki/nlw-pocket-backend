@@ -33,5 +33,6 @@ app
     port: port,
   })
   .then(() => {
-    console.log('HTTP server running on port 3333!')
+    // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
+    console.log(`HTTP server running on port ${port}!`)
   })
