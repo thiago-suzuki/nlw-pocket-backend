@@ -1,6 +1,11 @@
 # NLW POCKET - BACKEND
 Backend da Aplicação in.orbit feito durante o NLW POCKET
 
+<h1 align="center">
+  <img alt="NLW" title="NLW" width="700" src=".github/app.png" />
+</h1>
+
+
 <br>
 
 ## 💻 Tecnologias Utilizadas nesse Projeto
