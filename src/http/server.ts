@@ -25,11 +25,11 @@ app.register(createCompletionRoute)
 app.register(getPendingGoalsRoute)
 app.register(getWeekSummaryRoute)
 
-// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-const port: any = process.env.PORT || 4000
+const port = process.env.PORT ? Number(process.env.PORT) : 3333
 
 app
   .listen({
+    host: '0.0.0.0',
     port: port,
   })
   .then(() => {
