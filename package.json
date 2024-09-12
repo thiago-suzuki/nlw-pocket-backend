@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file .env src/http/server.ts",
+    "build": "rimraf dist && tsc -p tsconfig.json",
+    "start": "tsx --env-file .env src/http/server.ts",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/http/server.ts",
     "gnt-dk": "npx drizzle-kit generate",
     "mgt-dk": "npx drizzle-kit migrate",
     "studio-dk": "npx drizzle-kit studio --port 3001",
@@ -17,6 +19,8 @@
     "@biomejs/biome": "1.8.3",
     "@types/node": "^22.5.4",
     "drizzle-kit": "^0.24.2",
+    "rimraf": "^6.0.1",
+    "ts-node-dev": "^2.0.0",
     "tsx": "^4.19.0",
     "typescript": "^5.6.2"
   },
@@ -24,6 +28,7 @@
     "@fastify/cors": "^9.0.1",
     "@paralleldrive/cuid2": "^2.2.2",
     "dayjs": "^1.11.13",
+    "dotenv-cli": "^7.4.2",
     "drizzle-orm": "^0.33.0",
     "fastify": "^4.28.1",
     "fastify-type-provider-zod": "^2.0.0",
