@@ -25,9 +25,12 @@ app.register(createCompletionRoute)
 app.register(getPendingGoalsRoute)
 app.register(getWeekSummaryRoute)
 
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+const port: any = process.env.PORT || 4000
+
 app
   .listen({
-    port: Number(process.env.PORT) || 4000,
+    port: port,
   })
   .then(() => {
     console.log('HTTP server running on port 3333!')
